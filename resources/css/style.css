@@ -58,7 +58,7 @@ something we had not covered in class */
 
 /*styling for header with logo and navigation*/
 
-header{
+header {
   height: 4rem;
   min-height: 64px; /*keep top bar from shrinking for navigation touchability */
   font-size: 1rem;
@@ -67,14 +67,8 @@ header{
   align-items: center;
 }
 
-div {
-  display: inline-block;
-  margin-left: 1.5rem;
-}
-
 img {
   min-height: 32px;  /*keep icons from shrinking for navigation legibility */
-  vertical-align: middle;
 }
 
 nav {
@@ -96,15 +90,29 @@ h1 {
   line-height: 1.2;
 }
 
+h2 {
+  font-size: 2.2em;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+}
+
 h3 {
-  font-size: 1.6em;
+  font-size: 1.8em;
   font-weight: bold;
   letter-spacing: 0.005em;
   line-height: 1.4;
 }
 
-span, li {
-  font-size: 1.2em;
+p, span, li {
+  font-size: 1em;
+  letter-spacing: 0.002em;
+  line-height: 1.2;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
 }
 
 .light {
@@ -132,33 +140,37 @@ span, li {
   }
 }
 
+/*styling the banner section*/
+
 .banner {
   background-color: grey;
   font-size: 1rem;
+  display: flex;
+  align-items: center;
 }
 
-.banner img {
+.banner-img-wrapper {
   width: 60%;
-  margin: 2rem 1.5rem;
-  vertical-align: middle;
+  padding: 2rem 0 2rem 1.5rem;
 }
 
-@media only screen and (max-width: 480px) {
-  .banner img {
-    margin: 0;
-    width: 100%;
-  }
+.banner-img-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .banner-text {
-  max-width: 30%;
-  margin: 0;
+  max-width: 40%;
   font-size: 1rem;
-  vertical-align: middle;
 }
 
-.banner_text h1 {
-  margin-bottom: 0.5em;
+.banner-text h1 {
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.banner-text h3 {
+  padding-left: 1.5rem;
 }
 
 .button {
@@ -166,21 +178,134 @@ span, li {
   text-align: center;
   color: white;
   background-color: darkgrey;
-  padding: 1em 0;
-  margin-top: 1em;
-  margin-right: 0.5em;
+  padding: 1rem 0;
+  margin: 1rem 1.5rem 0 1.5rem;
 }
 
 @media only screen and (max-width: 480px) {
+  .banner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .banner-img-wrapper {
+    padding: 0;
+    width: 100%;
+  }
+
   .banner-text {
-    display: block;
     max-width: 100%;
-    padding: 2em 1em;
+  }
+
+  .button {
+    margin: 1rem 1.5rem 0 1.5rem;
   }
 }
 
-@media only screen and (min-width: 1400px) {
-  .button {
-    margin-right: 3em;
-  }
+/*styling the information section */
+
+.information {
+  font-size: 1rem;
+  display: flex;
 }
+
+.main {
+  width: 60%;
+  padding: 2rem 1.5rem 0 1.5rem;
+}
+
+.main img {
+  max-height: 100%;
+  max-width: 100%;
+ }
+
+.main h2 {
+  margin: 2rem 0 1.5rem 0;
+}
+
+.main span {
+  font-size: 0.8em;
+  display: block;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.events {
+  width: 40%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.event {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.event img {
+  width: 35%;
+  height: auto;
+  margin-left: 1rem;
+}
+
+.lecture {
+  background-color: grey;
+}
+
+.event-text {
+  margin-left: 1rem;
+}
+
+.event-text h3 {
+  line-height: 1;
+}
+
+.event-text p {
+  margin: 0.5rem 0;
+}
+
+@media only screen and (max-width:480px) {
+  .main {display: none;}
+  .desktop-info {display: none;}
+  .events {width: 100%;margin-top: 0;}
+  .event {
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .event img {
+    width: 90%;
+    height: auto;
+  }
+
+  .event-text {
+    width: 90%;
+    align-items: flex-end;
+  }
+
+  .lecture {
+    background-color: transparent;
+  }
+
+  .event-text a {
+    display: inline-block;
+    padding-bottom: 2rem;
+  }
+
+  .lecture a {
+    display: inline-block;
+    padding-bottom: 1rem;}
+
+}
+
+@media only screen and (min-width:480px) {
+  .mobile-info {
+    display: none;
+  }
+
+}
+
+/*
+*/
