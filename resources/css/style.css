@@ -73,9 +73,10 @@ something we had not covered in class */
   }
 }
 
-/*styling for header with logo and navigation*/
+/*styling for header with logo and navigation, plus all html tag elements stylings*/
 
 header {
+  box-sizing: border-box;
   min-height: 64px; /*keep top bar from shrinking for navigation touchability */
   font-size: 1rem;
   display: flex;
@@ -88,7 +89,7 @@ header {
   width: 100%;
 }
 
-main {
+body {
   margin-top: 64px;
   width: 100%;
 }
@@ -96,6 +97,7 @@ main {
 img {
   min-height: 32px;  /*keep icons from shrinking for navigation legibility */
 }
+
 
 nav {
   display: inline-block;
@@ -153,31 +155,49 @@ video {
     height: auto;
 }
 
+/*footer styling*/
+
 footer {
+  box-sizing: border-box;
   width: 100%;
   height: 4rem;
   display: flex;
   justify-content: space-between;
-  padding-top:  1rem;
-  padding-left: 1.5rem;
+  padding-top: 1rem;
   color: rgba(0, 0, 0, 1);
   background-color: rgba(191,191,191,1);
+}
+
+footer span {
+  padding-left: 1.5rem;
 }
 
 footer nav ul li a {
   color: rgba(0, 0, 0, 1);
 }
 
+@media only screen and (max-width:480px) {
+  footer span {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  footer nav {
+    display: none;
+  }
+}
+
 .logo {
   display: flex;
   align-items: center;
+  padding-left: 1.5rem;
 }
 
 .light {
   color: rgba(200, 248, 118, 1);
 }
 
-/*found sweet spot at 750px for switching to the header mobile layout*/
+ /*found sweet spot at 750px for switching to the header mobile layout*/
 
 @media only screen and (min-width: 750px) {
   .mobile {
@@ -198,7 +218,7 @@ footer nav ul li a {
   }
 }
 
-/*styling the banner section*/
+/*styling the banner section including CTA button*/
 
 .banner {
   font-size: 1rem;
@@ -412,6 +432,7 @@ footer nav ul li a {
 }
 
 /*Styling of the class offer section*/
+
 .offer {
   background-color: rgba(191,191,191,1);
 }
@@ -477,10 +498,6 @@ footer nav ul li a {
 }
 
 @media only screen and (max-width:480px) {
-  .offer {
-    background-color: white;
-  }
-
   .desktop-offer {
     display: none;
   }
@@ -609,18 +626,5 @@ footer nav ul li a {
   .main-thesis {
     width:100%;
     padding-bottom: 1.5rem;
-  }
-}
-
-/*footer styling*/
-
-@media only screen and (max-width:480px) {
-  footer span {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  footer nav {
-    display: none;
   }
 }
