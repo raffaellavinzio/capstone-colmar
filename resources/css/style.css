@@ -50,7 +50,7 @@ something we had not covered in class */
   }
 }
 
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 425px) {
   html {
     font-size: 14px;
   }
@@ -104,7 +104,7 @@ h3 {
   line-height: 1.4;
 }
 
-p, span, li {
+p, span, li, button {
   font-size: 1em;
   letter-spacing: 0.002em;
   line-height: 1.2;
@@ -165,21 +165,25 @@ p, span, li {
 }
 
 .banner-text h1 {
+  width: 74%;
   padding-left: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
 .banner-text h3 {
+  width: 74%;
   padding-left: 1.5rem;
 }
 
-.button {
+.banner-text button {
+  width: 75%;
   display: block;
   text-align: center;
   color: white;
   background-color: darkgrey;
   padding: 1rem 0;
   margin: 1rem 1.5rem 0 1.5rem;
+  border: none;
 }
 
 @media only screen and (max-width: 480px) {
@@ -194,11 +198,22 @@ p, span, li {
   }
 
   .banner-text {
+    width: 95%%;
     max-width: 100%;
   }
 
-  .button {
-    margin: 1rem 1.5rem 0 1.5rem;
+  .banner-text h1 {
+    margin-top: 2rem;
+    width: 95%;
+  }
+
+  .banner-text h3 {
+    width: 95%;
+  }
+
+  .banner-text button {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -266,23 +281,34 @@ p, span, li {
 }
 
 @media only screen and (max-width:480px) {
-  .main {display: none;}
-  .desktop-info {display: none;}
-  .events {width: 100%;margin-top: 0;}
+  .main {
+    display: none;
+  }
+
+  .desktop-info {
+    display: none;
+  }
+
+  .events {
+    width: 100%;
+    margin-top: 0;
+  }
+
   .event {
     flex-direction: column;
     align-items: center;
-
   }
 
   .event img {
     width: 90%;
     height: auto;
+    margin-left: 0;
+    margin-bottom: 1rem;
   }
 
   .event-text {
     width: 90%;
-    align-items: flex-end;
+    padding-left: 1rem;
   }
 
   .lecture {
@@ -297,15 +323,99 @@ p, span, li {
   .lecture a {
     display: inline-block;
     padding-bottom: 1rem;}
-
 }
 
 @media only screen and (min-width:480px) {
   .mobile-info {
     display: none;
   }
-
 }
 
-/*
-*/
+/*Styling of the class offer section*/
+
+.offer h2 {
+  text-align: center;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.desktop-offer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.subject {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem 2rem 1rem;
+  max-width: 27%;/*sweet spot for responsive layout "grid"*/
+}
+
+.subject:nth-child(3n+1) {
+  margin-left: 4.5rem;
+}
+
+.subject:nth-child(3n+0), .subject:last-child {
+  margin-right: 4.5rem;
+}
+
+.subject img {
+  width: 100%;
+  height: auto;
+}
+
+.subject-text {
+  margin: 2rem 6.5rem 1.5rem 1rem;
+}
+
+.subject-text p {
+  margin-top: 0.5rem;
+}
+
+@media only screen and (min-width:481px) {
+  .mobile-offer {
+    display: none;
+  }
+}
+
+@media only screen and (max-width:480px) {
+  .desktop-offer {
+    display: none;
+  }
+
+  .mobile-offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .offer h2 {
+    margin-bottom: 1rem;
+  }
+
+  .mobile-offer button {
+    width: 90%;
+    background-color: grey;
+    color: white;
+    padding: 1rem 0 1.5rem 1rem;
+    cursor: pointer;
+    display: block;
+    margin: 0.5rem 0 0 0;
+    text-align: left;
+    border: none;
+  }
+
+  .mobile-offer button:first-child {
+    margin: 0;
+  }
+
+  .mobile-offer button:last-child {
+    margin-bottom: 2rem;
+  }
+
+  .mobile-offer button:hover {
+    background-color: blue;
+  }
+
+}
