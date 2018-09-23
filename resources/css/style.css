@@ -1,5 +1,21 @@
+@font-face {
+  font-family: 'Sintony';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Sintony'), url(https://fonts.gstatic.com/s/sintony/v5/XoHm2YDqR7-98cVUETMtug.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Rubik'), local('Rubik-Regular'), url(https://fonts.gstatic.com/s/rubik/v7/iJWKBXyIfDnIV7nBrXw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 html {
-  font-family: sans-serif;
+  font-family: 'Sintony', sans-serif;
   font-size: 16px;
   transition: all 0.75s ease-in-out 0;
 }
@@ -60,12 +76,21 @@ something we had not covered in class */
 /*styling for header with logo and navigation*/
 
 header {
-  height: 4rem;
   min-height: 64px; /*keep top bar from shrinking for navigation touchability */
   font-size: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: rgba(106, 126, 133, 1);
+  color: rgba(255, 255, 255, 1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+main {
+  margin-top: 64px;
+  width: 100%;
 }
 
 img {
@@ -84,16 +109,17 @@ nav ul li {
   vertical-align: middle;
 }
 
-nav ul li a {
-  color: black;
+nav ul li a, a {
+  color: rgba(255, 255, 255, 1);
   text-decoration: none;
 }
 
-nav ul li a:active {
-  color: blue;
+nav ul li a:active, a:active {
+  color: rgba(200, 248, 118, 1);
 }
 
 h1 {
+  font-family: 'Rubik', sans-serif;
   font-size: 2.6em;
   font-weight: bold;
   letter-spacing: 0.02em;
@@ -101,6 +127,7 @@ h1 {
 }
 
 h2 {
+  font-family: 'Rubik', sans-serif;
   font-size: 2.2em;
   font-weight: bold;
   letter-spacing: 0.01em;
@@ -108,13 +135,14 @@ h2 {
 }
 
 h3 {
+  font-family: 'Rubik', sans-serif;
   font-size: 1.8em;
   font-weight: bold;
   letter-spacing: 0.005em;
   line-height: 1.4;
 }
 
-p, span, li, button {
+p, span, li, button, a {
   font-size: 1em;
   letter-spacing: 0.002em;
   line-height: 1.2;
@@ -132,6 +160,12 @@ footer {
   justify-content: space-between;
   padding-top:  1rem;
   padding-left: 1.5rem;
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(191,191,191,1);
+}
+
+footer nav ul li a {
+  color: rgba(0, 0, 0, 1);
 }
 
 .logo {
@@ -140,7 +174,7 @@ footer {
 }
 
 .light {
-  color:grey;
+  color: rgba(200, 248, 118, 1);
 }
 
 /*found sweet spot at 750px for switching to the header mobile layout*/
@@ -167,10 +201,10 @@ footer {
 /*styling the banner section*/
 
 .banner {
-  background-color: grey;
   font-size: 1rem;
   display: flex;
   align-items: center;
+  background-color: rgba(191,191,191,1);
 }
 
 .banner-img-wrapper {
@@ -203,8 +237,7 @@ footer {
   width: 75%;
   display: block;
   text-align: center;
-  color: white;
-  background-color: darkgrey;
+  background-color: rgba(200, 248, 118, 1);
   padding: 1rem 0;
   margin: 1rem 1.5rem 0 1.5rem;
   border: none;
@@ -212,7 +245,7 @@ footer {
 }
 
 .banner-text button:hover {
-  background-color: blue;
+  background-color: rgba(254, 130, 50, 1);
 }
 
 @media only screen and (max-width: 480px) {
@@ -241,8 +274,8 @@ footer {
   }
 
   .banner-text button {
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
+    width: 90%;
+    margin: 1.5rem auto 2rem auto;
   }
 }
 
@@ -251,6 +284,8 @@ footer {
 .information {
   font-size: 1rem;
   display: flex;
+  background-color: rgba(106, 126, 133, 1);
+  color: rgba(255, 255, 255, 1);
 }
 
 .main {
@@ -285,6 +320,7 @@ footer {
   display: flex;
   align-items: center;
   padding: 1rem 0;
+  background-color: rgba(148, 119, 223, 1);
 }
 
 .event img {
@@ -293,8 +329,22 @@ footer {
   margin-left: 1rem;
 }
 
+.colored-tile-az {
+  background-color: rgba(105, 202, 216, 1);
+  color: rgba(0, 0, 0, 1);
+}
+
 .colored-tile {
-  background-color: grey;
+  background-color: rgba(200, 248, 118, 1);
+  color: rgba(0, 0, 0, 1);
+}
+
+.colored-tile a, .colored-tile-az a {
+  color: rgba(0, 0, 0, 1);
+}
+
+.colored-tile a:active, .colored-tile-az a:active {
+  color: rgba(254, 130, 50, 1);;
 }
 
 .event-text {
@@ -351,7 +401,8 @@ footer {
 
   .lecture a {
     display: inline-block;
-    padding-bottom: 1rem;}
+    padding-bottom: 1rem;
+  }
 }
 
 @media only screen and (min-width:480px) {
@@ -362,14 +413,14 @@ footer {
 
 /*Styling of the class offer section*/
 .offer {
-  background-color: grey;
+  background-color: rgba(191,191,191,1);
 }
 
 .offer h2 {
   text-align: center;
   padding: 2rem 0;
   width: 100%;
-  background-color: grey;
+  background-color: rgba(191,191,191,1);
 }
 
 .desktop-offer {
@@ -384,6 +435,8 @@ footer {
   flex-direction: column;
   margin: 0 1rem 2rem 1rem;
   max-width: 27%;/*sweet spot for responsive layout "grid"*/
+  background-color: rgba(148, 119, 223, 1);
+  color: rgba(255, 255, 255, 1);
 }
 
 .subject:nth-child(3n+1) {
@@ -392,6 +445,16 @@ footer {
 
 .subject:nth-child(3n+0), .subject:last-child {
   margin-right: 4.5rem;
+}
+
+.subject:nth-child(4n+2) {
+  background-color: rgba(200, 248, 118, 1);
+  color: rgba(0, 0, 0, 1);
+}
+
+.subject:nth-child(4n+1) {
+  background-color: rgba(105, 202, 216, 1);
+  color: rgba(0, 0, 0, 1);
 }
 
 .subject img {
@@ -426,22 +489,30 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  .offer h2 {
-    margin-bottom: 1rem;
+    background-color: rgba(191,191,191,1);
   }
 
   .mobile-offer button {
     width: 90%;
-    background-color: grey;
-    color: white;
     padding: 1rem 0 1.5rem 1rem;
     cursor: pointer;
     display: block;
     margin: 0.5rem 0 0 0;
     text-align: left;
     border: none;
+  }
+
+  .mobile-offer button:nth-child(3n+1) {
+    background-color: rgba(105, 202, 216, 1);
+  }
+
+  .mobile-offer button:nth-child(3n+2) {
+    background-color: rgba(200, 248, 118, 1);
+  }
+
+  .mobile-offer button:nth-child(3n+3) {
+    background-color: rgba(148, 119, 223, 1);
+    color: rgba(255, 255, 255, 1);
   }
 
   .mobile-offer button:first-child {
@@ -453,23 +524,27 @@ footer {
   }
 
   .mobile-offer button:hover {
-    background-color: blue;
+    background-color: rgba(254, 130, 50, 1);
   }
 }
 
 /*styling showcase section*/
 
 .showcase h2 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   width: 100%;
   text-align: center;
+  background-color: rgba(106, 126, 133, 1);
+  color: rgba(255, 255, 255, 1);
 }
 
 .thesis-container {
   display: flex;
   align-items: flex-start;
   padding-left: 1.5rem;
+  background-color: rgba(106, 126, 133, 1);
+  color: rgba(255, 255, 255, 1);
 }
 
 .main-thesis {
@@ -484,7 +559,7 @@ footer {
 }
 
 .main-thesis p {
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .featured-thesis {
@@ -516,7 +591,7 @@ footer {
 
 @media only screen and (max-width:480px) {
   .showcase h2 {
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
   }
 
   .featured-thesis {
@@ -538,6 +613,7 @@ footer {
 }
 
 /*footer styling*/
+
 @media only screen and (max-width:480px) {
   footer span {
     margin-top: 1rem;
