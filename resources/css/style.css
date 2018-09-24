@@ -67,7 +67,7 @@ something we had not covered in class */
   }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 410px) {
   html {
     font-size: 14px;
   }
@@ -124,7 +124,7 @@ h1 {
   font-family: 'Rubik', sans-serif;
   font-size: 2.6em;
   font-weight: bold;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.024em;
   line-height: 1.2;
 }
 
@@ -158,6 +158,7 @@ video {
 /*footer styling*/
 
 footer {
+  font-size: 1rem;
   box-sizing: border-box;
   width: 100%;
   height: 4rem;
@@ -243,18 +244,18 @@ footer nav ul li a {
 }
 
 .banner-text h1 {
-  width: 74%;
+  width: 100%;
   padding-left: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
 .banner-text h3 {
-  width: 74%;
+  width: 100%;
   padding-left: 1.5rem;
 }
 
 .banner-text button {
-  width: 75%;
+  width: 100%;
   display: block;
   text-align: center;
   background-color: rgba(200, 248, 118, 1);
@@ -434,6 +435,7 @@ footer nav ul li a {
 /*Styling of the class offer section*/
 
 .offer {
+  font-size: 1rem;
   background-color: rgba(191,191,191,1);
 }
 
@@ -546,6 +548,9 @@ footer nav ul li a {
 }
 
 /*styling showcase section*/
+.showcase {
+  font-size: 1rem;
+}
 
 .showcase h2 {
   padding-top: 2rem;
