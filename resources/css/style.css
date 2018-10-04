@@ -370,6 +370,7 @@ footer nav ul li a {
 
 .event-text {
   margin-left: 1rem;
+  width: 65%;
 }
 
 .event-text h3 {
